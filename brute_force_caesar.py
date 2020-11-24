@@ -1,9 +1,12 @@
 #program for brute forcing caesar cipher
 
 cipher_text=input("Enter the cipher-text:")                                      #entering the cipher text
+
+print("Entered cipher text:",cipher_text)
 for j in range(1,26):                                                            #loop for brute forcing
     list_of_values=[]
     final=""
+    
     for i in range(0,len(cipher_text)):
         cval=ord(cipher_text[i])
         cno=cval-j
@@ -23,3 +26,5 @@ for j in range(1,26):                                                           
     for i in list_of_values:
         final+=i
     print("Plain-Text, Assumption",j,final)                                      #printing all the values
+    
+    
